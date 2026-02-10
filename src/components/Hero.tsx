@@ -1,12 +1,14 @@
+import Image from 'next/image';
 import { ArrowRight, Truck, TrendingDown, Leaf } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-primary-950">
-      <div className="max-w-7xl mx-auto px-6 pt-28 pb-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-primary-400 text-sm font-medium tracking-wide mb-6">
+    <section className="bg-primary-950 pt-24 pb-0 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 gap-12 items-end">
+          {/* Text */}
+          <div className="py-12 lg:py-20">
+            <p className="text-primary-400 text-sm font-medium tracking-wide mb-5">
               농수산물 P2P 직거래 플랫폼
             </p>
 
@@ -23,7 +25,7 @@ export default function Hero() {
               시장가 대비 10~40% 저렴한 최상급 농수산물.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 mb-12">
               <a
                 href="#service"
                 className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-accent-500 text-white font-semibold rounded-lg hover:bg-accent-600 transition-colors"
@@ -38,46 +40,31 @@ export default function Hero() {
                 회사 소개
               </a>
             </div>
+
+            {/* Compact stats */}
+            <div className="flex flex-wrap gap-6 text-sm">
+              {[
+                { icon: TrendingDown, text: '10~40% 절감' },
+                { icon: Truck, text: '당일 배송' },
+                { icon: Leaf, text: '수수료 2%' },
+              ].map((item) => (
+                <div key={item.text} className="flex items-center gap-2 text-primary-400">
+                  <item.icon size={15} className="text-accent-500" />
+                  <span>{item.text}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Stats */}
-          <div className="space-y-4">
-            {[
-              {
-                icon: TrendingDown,
-                stat: '10~40%',
-                label: '가격 절감',
-                desc: '중간 유통 마진을 제거해서 가능한 가격',
-              },
-              {
-                icon: Truck,
-                stat: '당일 배송',
-                label: '새벽 경매 직후 출발',
-                desc: '경매장에서 바로 배송, 최상의 신선도',
-              },
-              {
-                icon: Leaf,
-                stat: '수수료 2%',
-                label: '업계 최저',
-                desc: '재고·물류센터 없는 구조로 낮은 운영비',
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex items-start gap-4 p-5 rounded-xl bg-primary-900/60 border border-primary-800"
-              >
-                <div className="p-2.5 rounded-lg bg-primary-800">
-                  <item.icon size={20} className="text-accent-400" />
-                </div>
-                <div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-xl font-bold text-white">{item.stat}</span>
-                    <span className="text-primary-400 text-sm">{item.label}</span>
-                  </div>
-                  <p className="text-primary-500 text-sm mt-0.5">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+          {/* Image */}
+          <div className="relative h-[400px] lg:h-[560px] rounded-t-2xl overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1676069096057-b95d34cb27d8?w=800&q=80&fit=crop"
+              alt="신선한 농산물 진열"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Gavel, ArrowRight, RefreshCw, Truck } from 'lucide-react';
 
 const steps = [
@@ -7,6 +8,8 @@ const steps = [
     title: '경매장 직구매',
     time: '새벽 4시',
     description: '전문 경매사가 새벽 경매에서 최고 품질의 농수산물을 직접 낙찰받습니다.',
+    image: 'https://images.unsplash.com/photo-1495522256788-dc85b944b656?w=500&q=80&fit=crop',
+    imageAlt: '채소 시장 진열대',
   },
   {
     number: '02',
@@ -14,6 +17,8 @@ const steps = [
     title: '실시간 매칭',
     time: '주문 즉시',
     description: '소비자의 주문과 경매상을 실시간으로 매칭하여 즉시 처리합니다.',
+    image: 'https://images.unsplash.com/photo-1728044849248-e90f3ec6a889?w=500&q=80&fit=crop',
+    imageAlt: '모바일 주문',
   },
   {
     number: '03',
@@ -21,6 +26,8 @@ const steps = [
     title: '당일 직배송',
     time: '당일 도착',
     description: '중간 유통 단계 없이 경매장에서 소비자의 식탁까지 직배송합니다.',
+    image: 'https://images.unsplash.com/photo-1757627550652-30788bfce978?w=500&q=80&fit=crop',
+    imageAlt: '나무 상자에 담긴 신선한 채소',
   },
 ];
 
@@ -41,22 +48,30 @@ export default function HowItWorks() {
         <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step, i) => (
             <div key={i} className="relative">
-              <div className="bg-white rounded-xl border border-gray-100 p-7 h-full">
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-4xl font-bold text-gray-100">
-                    {step.number}
-                  </span>
-                  <span className="text-xs font-medium text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
+              <div className="bg-white rounded-xl border border-gray-100 overflow-hidden h-full">
+                <div className="relative h-44">
+                  <Image
+                    src={step.image}
+                    alt={step.imageAlt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute top-3 left-3 bg-white/90 text-xs font-medium text-primary-600 px-2.5 py-1 rounded-md">
                     {step.time}
-                  </span>
+                  </div>
                 </div>
-                <step.icon size={22} className="text-gray-900 mb-4" />
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {step.description}
-                </p>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-sm font-bold text-gray-300">{step.number}</span>
+                    <step.icon size={18} className="text-gray-900" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
 
               {i < steps.length - 1 && (
