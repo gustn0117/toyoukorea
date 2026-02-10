@@ -12,20 +12,19 @@ export default function Hero() {
         className="object-cover"
         priority
       />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/90 via-primary-900/80 to-primary-800/70" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/90 via-primary-900/85 to-primary-800/80" />
 
-      {/* Decorative blurs */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-500/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full">
         <div className="max-w-3xl">
           <div className="animate-fade-up">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-primary-200 text-sm font-medium mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-primary-200 text-sm font-medium mb-8">
               <span className="w-2 h-2 bg-accent-400 rounded-full animate-pulse" />
               대한민국 최초 농수산물 P2P 직거래 플랫폼
             </span>
@@ -50,14 +49,14 @@ export default function Hero() {
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4">
             <a
               href="#service"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-500 text-white font-semibold rounded-full hover:bg-accent-600 transition-all hover:shadow-lg hover:shadow-accent-500/25 hover:scale-105"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-500 text-white font-semibold rounded-full hover:bg-accent-600 transition-all hover:shadow-lg hover:shadow-accent-500/25"
             >
               서비스 알아보기
               <ArrowRight size={18} />
             </a>
             <a
               href="#about"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full hover:bg-white/20 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all backdrop-blur-sm"
             >
               회사 소개
             </a>
@@ -88,9 +87,9 @@ export default function Hero() {
           ].map((item) => (
             <div
               key={item.label}
-              className="group flex items-start gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10"
             >
-              <div className="p-3 rounded-xl bg-gradient-to-br from-accent-500/20 to-accent-600/10">
+              <div className="p-3 rounded-xl bg-accent-500/20">
                 <item.icon size={24} className="text-accent-400" />
               </div>
               <div>

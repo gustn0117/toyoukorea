@@ -18,6 +18,10 @@ html {
   .section-padding {
     @apply px-6 py-20 md:px-8 lg:px-16 lg:py-28;
   }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-primary-400;
+  }
 }
 
 @keyframes fade-up {
@@ -29,11 +33,6 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
 }
 
 .animate-fade-up {
@@ -53,8 +52,4 @@ html {
 .animate-fade-up-delay-3 {
   animation: fade-up 0.7s ease-out 0.45s forwards;
   opacity: 0;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
 }
