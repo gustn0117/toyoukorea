@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&q=80"
+        src="https://images.unsplash.com/photo-1676069096057-b95d34cb27d8?w=1920&q=80&fit=crop"
         alt="신선한 농산물"
         fill
         className="object-cover"

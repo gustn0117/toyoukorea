@@ -63,7 +63,7 @@ export default function About() {
               <div className="relative">
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden shadow-xl shadow-primary-500/20">
                   <Image
-                    src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&q=80"
+                    src="https://images.unsplash.com/photo-1705928629040-c701a1e70531?w=600&q=80&fit=crop"
                     alt="신선한 농산물 직거래"
                     fill
                     className="object-cover"

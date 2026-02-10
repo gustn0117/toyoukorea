@@ -9,7 +9,7 @@ export default function CTA() {
     >
       {/* Background image */}
       <Image
-        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80"
+        src="https://images.unsplash.com/photo-1549888722-bf34acd6a68c?w=1920&q=80&fit=crop"
         alt="농업 풍경"
         fill
         className="object-cover"
@@ -36,14 +36,14 @@ export default function CTA() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
           <a
-            href="mailto:contact@toyoukorea.co.kr"
+            href="mailto:overwrap0@gmail.com"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-500 text-white font-semibold rounded-full hover:bg-accent-600 transition-all hover:shadow-lg hover:shadow-accent-500/25"
           >
             파트너십 문의
             <ArrowRight size={18} />
           </a>
           <a
-            href="mailto:invest@toyoukorea.co.kr"
+            href="mailto:overwrap0@gmail.com"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all backdrop-blur-sm"
           >
             투자 문의
@@ -56,9 +56,9 @@ export default function CTA() {
             {
               icon: Mail,
               label: '이메일',
-              value: 'contact@toyoukorea.co.kr',
+              value: 'overwrap0@gmail.com',
             },
-            { icon: Phone, label: '전화', value: '02-1234-5678' },
+            { icon: Phone, label: '전화', value: '032-217-9500' },
             { icon: MapPin, label: '주소', value: '서울특별시 강남구' },
           ].map((item, i) => (
             <div key={i} className="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
