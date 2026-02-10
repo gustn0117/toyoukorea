@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Gavel, ArrowRight, RefreshCw, Truck } from 'lucide-react';
 
 const steps = [
@@ -9,6 +10,8 @@ const steps = [
     description: '전문 경매사가 새벽 경매에서 최고 품질의 농수산물을 직접 낙찰받습니다.',
     color: 'from-primary-500 to-primary-600',
     iconBg: 'bg-primary-100 text-primary-600',
+    image: 'https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=600&q=80',
+    imageAlt: '수산물 경매 시장',
   },
   {
     number: '02',
@@ -18,6 +21,8 @@ const steps = [
     description: '소비자의 주문과 경매상을 실시간으로 매칭하여 즉시 처리합니다.',
     color: 'from-accent-500 to-accent-600',
     iconBg: 'bg-accent-100 text-accent-600',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80',
+    imageAlt: '모바일 주문 매칭',
   },
   {
     number: '03',
@@ -27,6 +32,8 @@ const steps = [
     description: '중간 유통 단계 없이 경매장에서 소비자의 식탁까지 신선하게 직배송합니다.',
     color: 'from-emerald-500 to-emerald-600',
     iconBg: 'bg-emerald-100 text-emerald-600',
+    image: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&q=80',
+    imageAlt: '신선식품 배송',
   },
 ];
 
@@ -62,21 +69,31 @@ export default function HowItWorks() {
                 </div>
 
                 {/* Card */}
-                <div className="w-full p-8 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
-                  <div
-                    className={`inline-flex p-3 rounded-xl ${step.iconBg} mb-4`}
-                  >
-                    <step.icon size={24} />
+                <div className="w-full rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                  <div className="relative h-40 w-full">
+                    <Image
+                      src={step.image}
+                      alt={step.imageAlt}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-1">
-                    {step.title}
-                  </h3>
-                  <p className="text-sm font-medium text-primary-600 mb-3">
-                    {step.subtitle}
-                  </p>
-                  <p className="text-gray-500 leading-relaxed text-sm">
-                    {step.description}
-                  </p>
+                  <div className="p-8">
+                    <div
+                      className={`inline-flex p-3 rounded-xl ${step.iconBg} mb-4`}
+                    >
+                      <step.icon size={24} />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      {step.title}
+                    </h3>
+                    <p className="text-sm font-medium text-primary-600 mb-3">
+                      {step.subtitle}
+                    </p>
+                    <p className="text-gray-500 leading-relaxed text-sm">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
               </div>
 

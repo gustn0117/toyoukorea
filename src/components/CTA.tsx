@@ -1,11 +1,22 @@
+import Image from 'next/image';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function CTA() {
   return (
     <section
       id="contact"
-      className="section-padding bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 relative overflow-hidden"
+      className="section-padding relative overflow-hidden"
     >
+      {/* Background image */}
+      <Image
+        src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1920&q=80"
+        alt="농업 풍경"
+        fill
+        className="object-cover"
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/92 via-primary-900/90 to-primary-800/88" />
+
       {/* Decorative */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary-400/10 rounded-full blur-3xl" />
@@ -50,7 +61,7 @@ export default function CTA() {
             { icon: Phone, label: '전화', value: '02-1234-5678' },
             { icon: MapPin, label: '주소', value: '서울특별시 강남구' },
           ].map((item, i) => (
-            <div key={i} className="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div key={i} className="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
               <item.icon
                 size={20}
                 className="mx-auto mb-2 text-primary-300"

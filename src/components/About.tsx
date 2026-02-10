@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ShieldCheck, Zap, Target } from 'lucide-react';
 
 const values = [
@@ -60,15 +61,15 @@ export default function About() {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-xl shadow-primary-500/20">
-                  <div className="text-center text-white">
-                    <div className="text-5xl md:text-6xl font-bold">TY</div>
-                    <div className="text-sm font-medium text-primary-200 mt-1">
-                      To You Korea
-                    </div>
-                  </div>
+                <div className="w-48 h-48 md:w-64 md:h-64 rounded-3xl overflow-hidden shadow-xl shadow-primary-500/20">
+                  <Image
+                    src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&q=80"
+                    alt="신선한 농산물 직거래"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-accent-400 flex items-center justify-center text-white font-bold text-xs text-center p-2 shadow-lg">
+                <div className="absolute -bottom-3 -right-3 w-20 h-20 rounded-2xl bg-accent-400 flex items-center justify-center text-white font-bold text-xs text-center p-2 shadow-lg">
                   경매장
                   <br />→ 식탁
                 </div>

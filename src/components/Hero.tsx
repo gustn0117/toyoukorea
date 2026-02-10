@@ -1,13 +1,24 @@
+import Image from 'next/image';
 import { ArrowRight, Truck, TrendingDown, Leaf } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background image */}
+      <Image
+        src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=1920&q=80"
+        alt="신선한 농산물"
+        fill
+        className="object-cover"
+        priority
+      />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/90 via-primary-900/85 to-primary-800/80" />
+
       {/* Decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-500/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full">
@@ -76,7 +87,7 @@ export default function Hero() {
           ].map((item) => (
             <div
               key={item.label}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10"
+              className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10"
             >
               <div className="p-3 rounded-xl bg-accent-500/20">
                 <item.icon size={24} className="text-accent-400" />
