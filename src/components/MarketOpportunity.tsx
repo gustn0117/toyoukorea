@@ -28,49 +28,45 @@ const solutions = [
 
 export default function MarketOpportunity() {
   return (
-    <section id="market" className="relative section-padding bg-white overflow-hidden">
-      {/* Decorative */}
-      <div className="absolute top-1/2 left-0 w-96 h-96 bg-red-50/50 rounded-full blur-3xl -translate-x-1/2" />
-      <div className="absolute top-1/2 right-0 w-96 h-96 bg-primary-50/50 rounded-full blur-3xl translate-x-1/2" />
-
-      <div className="relative z-10 max-w-7xl mx-auto">
+    <section id="market" className="section-padding bg-white">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-gray-50 text-primary-600 font-semibold text-sm tracking-wide mb-4 border border-gray-100">
+          <p className="text-primary-600 font-semibold text-sm tracking-wide uppercase mb-3">
             Market Opportunity
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             시장 기회
           </h2>
-          <p className="mt-5 text-gray-500 max-w-xl mx-auto text-lg">
+          <p className="text-gray-500 max-w-xl mx-auto text-lg">
             현재 유통 구조의 문제점과 투유코리아의 솔루션
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
           {/* Problems */}
-          <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-red-50 to-orange-50/30 border border-red-100/80 shadow-sm">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-2.5 bg-red-100 rounded-xl shadow-sm">
-                <AlertTriangle size={22} className="text-red-600" />
+          <div className="p-8 rounded-2xl bg-red-50/60 border border-red-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-red-100 rounded-lg">
+                <AlertTriangle size={20} className="text-red-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg font-bold text-gray-900">
                 현재 유통 구조의 문제점
               </h3>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-6">
               {problems.map((group) => (
                 <div key={group.group}>
-                  <h4 className="text-sm font-semibold text-red-700 uppercase tracking-wide mb-3">
+                  <h4 className="text-sm font-semibold text-red-700 mb-3">
                     {group.group}
                   </h4>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2">
                     {group.items.map((item, i) => (
                       <li
                         key={i}
-                        className="flex items-start gap-3 text-gray-700 p-3 rounded-xl bg-white/60 border border-red-50"
+                        className="flex items-start gap-3 text-gray-700 text-[15px] p-3 rounded-lg bg-white border border-red-100/60"
                       >
-                        <span className="mt-1.5 w-2 h-2 rounded-full bg-red-400 flex-shrink-0" />
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -80,12 +76,12 @@ export default function MarketOpportunity() {
             </div>
 
             {/* Visual: problematic flow */}
-            <div className="mt-8 p-4 rounded-xl bg-white/80 border border-red-100 shadow-sm">
-              <div className="flex items-center justify-between text-xs text-gray-500 font-medium">
+            <div className="mt-6 p-4 rounded-lg bg-white border border-red-100">
+              <div className="flex items-center justify-between text-xs text-gray-600 font-medium flex-wrap gap-y-2">
                 {['경매장', '도매상', '중간상', '소매점', '소비자'].map(
                   (name, i, arr) => (
                     <span key={name} className="flex items-center gap-1">
-                      <span className="px-2.5 py-1.5 bg-red-50 rounded-lg text-red-700 border border-red-100">
+                      <span className="px-2 py-1 bg-red-50 rounded text-red-700 border border-red-100">
                         {name}
                       </span>
                       {i < arr.length - 1 && (
@@ -102,26 +98,26 @@ export default function MarketOpportunity() {
           </div>
 
           {/* Solutions */}
-          <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-primary-50 to-emerald-50/30 border border-primary-100/80 shadow-sm">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="p-2.5 bg-primary-100 rounded-xl shadow-sm">
-                <CheckCircle size={22} className="text-primary-600" />
+          <div className="p-8 rounded-2xl bg-primary-50/60 border border-primary-100">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-2 bg-primary-100 rounded-lg">
+                <CheckCircle size={20} className="text-primary-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg font-bold text-gray-900">
                 투유코리아의 솔루션
               </h3>
             </div>
 
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {solutions.map((item, i) => (
                 <li
                   key={i}
-                  className="group flex items-start gap-4 p-4 rounded-xl bg-white/70 border border-primary-100/50 hover:bg-white hover:shadow-sm hover:border-primary-200 transition-all"
+                  className="flex items-center gap-3 p-3.5 rounded-lg bg-white border border-primary-100/60"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-sm">
-                    <CheckCircle size={16} className="text-white" />
+                  <div className="flex-shrink-0 w-7 h-7 rounded-full bg-primary-600 flex items-center justify-center">
+                    <CheckCircle size={14} className="text-white" />
                   </div>
-                  <span className="text-gray-700 font-medium pt-1">
+                  <span className="text-gray-700 font-medium text-[15px]">
                     {item}
                   </span>
                 </li>
@@ -129,17 +125,17 @@ export default function MarketOpportunity() {
             </ul>
 
             {/* Visual: improved flow */}
-            <div className="mt-8 p-4 rounded-xl bg-white/80 border border-primary-100 shadow-sm">
+            <div className="mt-6 p-4 rounded-lg bg-white border border-primary-100">
               <div className="flex items-center justify-center gap-3 text-xs font-medium">
-                <span className="px-4 py-2 bg-primary-50 rounded-lg text-primary-700 border border-primary-100">
+                <span className="px-3 py-1.5 bg-primary-50 rounded text-primary-700 border border-primary-100">
                   경매장
                 </span>
                 <ArrowRight size={14} className="text-primary-400" />
-                <span className="px-4 py-2 bg-gradient-to-r from-accent-500 to-accent-600 rounded-lg text-white font-bold shadow-sm shadow-accent-500/20">
+                <span className="px-3 py-1.5 bg-accent-500 rounded text-white font-bold">
                   투유코리아
                 </span>
                 <ArrowRight size={14} className="text-primary-400" />
-                <span className="px-4 py-2 bg-primary-50 rounded-lg text-primary-700 border border-primary-100">
+                <span className="px-3 py-1.5 bg-primary-50 rounded text-primary-700 border border-primary-100">
                   소비자
                 </span>
               </div>

@@ -15,55 +15,52 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200/60">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2.5">
+          <div className="w-8 h-8 rounded-lg bg-primary-600 flex items-center justify-center">
             <span className="text-white font-bold text-sm">TY</span>
           </div>
-          <span className="font-bold text-lg text-gray-900">
+          <span className="font-bold text-lg text-gray-900 tracking-tight">
             투유코리아
           </span>
         </a>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-gray-600 hover:text-primary-600 transition-colors"
+              className="px-3 py-2 text-sm text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-50 transition-colors"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="text-sm font-semibold px-5 py-2.5 bg-primary-600 text-white rounded-full hover:bg-primary-700 transition-colors"
+            className="ml-3 text-sm font-semibold px-5 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
           >
             문의하기
           </a>
         </nav>
 
-        {/* Mobile menu button */}
         <button
-          className="md:hidden p-2 text-gray-600"
+          className="md:hidden p-2 text-gray-600 hover:text-gray-900"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="메뉴 열기"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile nav */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
+        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="block text-gray-700 py-2"
+              className="block text-gray-700 py-2.5 px-3 rounded-lg hover:bg-gray-50 transition-colors"
             >
               {link.label}
             </a>
@@ -71,7 +68,7 @@ export default function Header() {
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
-            className="block text-center font-semibold px-5 py-2.5 bg-primary-600 text-white rounded-full"
+            className="block text-center font-semibold px-5 py-2.5 bg-primary-600 text-white rounded-lg mt-2"
           >
             문의하기
           </a>
