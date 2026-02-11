@@ -105,17 +105,6 @@ export default function Roadmap() {
           </div>
         </div>
 
-        {/* Target metrics */}
-        <div className="mt-16 grid sm:grid-cols-2 gap-6">
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-700 text-white text-center">
-            <div className="text-4xl md:text-5xl font-bold mb-2">73억원</div>
-            <div className="text-primary-200">1년차 월 거래액 목표</div>
-          </div>
-          <div className="p-8 rounded-2xl bg-gradient-to-br from-accent-500 to-accent-600 text-white text-center">
-            <div className="text-4xl md:text-5xl font-bold mb-2">2년</div>
-            <div className="text-accent-100">손익분기점 달성 목표</div>
-          </div>
-        </div>
       </div>
     </section>
   );

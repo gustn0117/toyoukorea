@@ -1,4 +1,4 @@
-import { Users, Building2, DollarSign, TrendingUp, Rocket, BarChart3 } from 'lucide-react';
+import { Users, Building2, DollarSign, TrendingUp, Rocket } from 'lucide-react';
 
 const models = [
   {
@@ -38,11 +38,6 @@ const advantages = [
     icon: Rocket,
     title: '빠른 확장',
     desc: '경매상 네트워크 구축',
-  },
-  {
-    icon: BarChart3,
-    title: '손익분기점',
-    desc: '1~2년 내 달성 가능',
   },
 ];
 
@@ -110,7 +105,7 @@ export default function BusinessModel() {
           <h3 className="text-xl font-bold text-white text-center mb-8">
             경쟁 우위
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {advantages.map((item, i) => (
               <div
                 key={i}
