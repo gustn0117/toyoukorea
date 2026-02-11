@@ -13,18 +13,29 @@ export default function Hero() {
         priority
       />
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/90 via-primary-900/85 to-primary-800/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-950/92 via-primary-900/85 to-primary-800/75" />
 
       {/* Decorative elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-400/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-400/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-3xl" />
       </div>
+
+      {/* Grid pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full">
         <div className="max-w-3xl">
           <div className="animate-fade-up">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-primary-200 text-sm font-medium mb-8">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-primary-200 text-sm font-medium mb-8 border border-white/10">
               <span className="w-2 h-2 bg-accent-400 rounded-full animate-pulse" />
               대한민국 최초 농수산물 P2P 직거래 플랫폼
             </span>
@@ -40,23 +51,23 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="animate-fade-up-delay-2 text-lg md:text-xl text-primary-200 mb-10 max-w-xl leading-relaxed">
+          <p className="animate-fade-up-delay-2 text-lg md:text-xl text-primary-200/90 mb-10 max-w-xl leading-relaxed">
             중간 유통 없이 경매장에서 소비자까지 직접 연결합니다.
             <br className="hidden md:block" />
-            시장가 대비 <strong className="text-white">10~40% 저렴한</strong> 최상급 농수산물을 만나보세요.
+            시장가 대비 <strong className="text-white font-semibold">10~40% 저렴한</strong> 최상급 농수산물을 만나보세요.
           </p>
 
           <div className="animate-fade-up-delay-3 flex flex-col sm:flex-row gap-4">
             <a
               href="#service"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-500 text-white font-semibold rounded-full hover:bg-accent-600 transition-all hover:shadow-lg hover:shadow-accent-500/25"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-accent-500 text-white font-semibold rounded-full hover:bg-accent-600 transition-all hover:shadow-lg hover:shadow-accent-500/25 hover:scale-[1.02]"
             >
               서비스 알아보기
-              <ArrowRight size={18} />
+              <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
             <a
               href="#about"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white font-semibold rounded-full hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10"
             >
               회사 소개
             </a>
@@ -87,9 +98,9 @@ export default function Hero() {
           ].map((item) => (
             <div
               key={item.label}
-              className="flex items-start gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10"
+              className="group flex items-start gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
             >
-              <div className="p-3 rounded-xl bg-accent-500/20">
+              <div className="p-3 rounded-xl bg-gradient-to-br from-accent-500/20 to-accent-600/10 group-hover:from-accent-500/30 group-hover:to-accent-600/20 transition-colors">
                 <item.icon size={24} className="text-accent-400" />
               </div>
               <div>

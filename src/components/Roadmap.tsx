@@ -41,13 +41,17 @@ const phases = [
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="roadmap" className="relative section-padding bg-white overflow-hidden">
+      {/* Decorative */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-primary-50/40 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-accent-50/30 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <span className="text-primary-600 font-semibold text-sm tracking-wide uppercase">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary-50 text-primary-600 font-semibold text-sm tracking-wide mb-4">
             Roadmap
           </span>
-          <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
             실행 계획
           </h2>
         </div>
@@ -62,8 +66,10 @@ export default function Roadmap() {
               <div key={i} className="relative md:py-8">
                 {/* Desktop timeline dot */}
                 <div
-                  className={`hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full ${phase.dotColor} border-4 border-white shadow-md z-10`}
-                />
+                  className={`hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 rounded-full ${phase.dotColor} border-4 border-white shadow-lg z-10 items-center justify-center`}
+                >
+                  <div className="w-2 h-2 rounded-full bg-white" />
+                </div>
 
                 <div
                   className={`md:w-[45%] ${
@@ -71,11 +77,11 @@ export default function Roadmap() {
                   }`}
                 >
                   <div
-                    className={`p-8 rounded-2xl bg-white border ${phase.borderColor} hover:shadow-lg transition-shadow`}
+                    className={`group p-8 rounded-2xl bg-white border ${phase.borderColor} shadow-sm hover:shadow-xl hover:shadow-gray-900/5 transition-all duration-300 hover:-translate-y-1`}
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <div
-                        className={`p-2 rounded-lg bg-gradient-to-br ${phase.color} text-white`}
+                        className={`p-2 rounded-lg bg-gradient-to-br ${phase.color} text-white shadow-sm`}
                       >
                         <phase.icon size={20} />
                       </div>
@@ -104,7 +110,6 @@ export default function Roadmap() {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
