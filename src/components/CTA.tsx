@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ArrowRight, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
 
 export default function CTA() {
   return (
@@ -42,21 +42,10 @@ export default function CTA() {
           </a>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-4 max-w-sm mx-auto">
-          {[
-            {
-              icon: Mail,
-              label: '이메일',
-              value: 'tooyoukorea@gmail.com',
-            },
-            { icon: MapPin, label: '주소', value: '서울특별시 강남구' },
-          ].map((item, i) => (
-            <div key={i} className="p-4 rounded-xl bg-white/[0.06] border border-white/10">
-              <item.icon size={18} className="text-accent-400 mx-auto mb-2" />
-              <div className="text-xs text-white/40 mb-0.5">{item.label}</div>
-              <div className="text-white text-sm font-medium">{item.value}</div>
-            </div>
-          ))}
+        <div className="inline-block p-4 rounded-xl bg-white/[0.06] border border-white/10">
+          <Mail size={18} className="text-accent-400 mx-auto mb-2" />
+          <div className="text-xs text-white/40 mb-0.5">이메일</div>
+          <div className="text-white text-sm font-medium">tooyoukorea@gmail.com</div>
         </div>
       </div>
     </section>
