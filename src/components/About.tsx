@@ -71,7 +71,7 @@ export default function About() {
             </div>
             <div className="relative min-h-[280px] md:min-h-full">
               <Image
-                src="https://images.unsplash.com/photo-1705928629040-c701a1e70531?w=600&q=80&fit=crop"
+                src="https://images.unsplash.com/photo-1557844352-761f2565b576?w=600&q=80&fit=crop"
                 alt="신선한 농산물 직거래"
                 fill
                 className="object-cover"

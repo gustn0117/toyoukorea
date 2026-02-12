@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center">
       <Image
-        src="https://images.unsplash.com/photo-1676069096057-b95d34cb27d8?w=1920&q=80&fit=crop"
+        src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=1920&q=80&fit=crop"
         alt="신선한 농산물"
         fill
         className="object-cover"

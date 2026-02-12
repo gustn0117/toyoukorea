@@ -10,7 +10,7 @@ const steps = [
     description: '전문 경매사가 새벽 경매에서 최고 품질의 농수산물을 직접 낙찰받습니다.',
     accent: 'bg-primary-600',
     iconBg: 'bg-primary-50 text-primary-600',
-    image: 'https://images.unsplash.com/photo-1495522256788-dc85b944b656?w=600&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1583266999030-aabe53af1a46?w=600&q=80&fit=crop',
     imageAlt: '채소 시장 진열대',
   },
   {
@@ -21,8 +21,8 @@ const steps = [
     description: '소비자의 주문과 경매상을 실시간으로 매칭하여 즉시 처리합니다.',
     accent: 'bg-accent-500',
     iconBg: 'bg-accent-50 text-accent-600',
-    image: 'https://images.unsplash.com/photo-1728044849248-e90f3ec6a889?w=600&q=80&fit=crop',
-    imageAlt: '스마트폰 음식 주문',
+    image: 'https://images.unsplash.com/photo-1480951759438-f39a376462f2?w=600&q=80&fit=crop',
+    imageAlt: '채소 가판대',
   },
   {
     number: '03',
@@ -32,8 +32,8 @@ const steps = [
     description: '중간 유통 단계 없이 경매장에서 소비자의 식탁까지 신선하게 직배송합니다.',
     accent: 'bg-emerald-600',
     iconBg: 'bg-emerald-50 text-emerald-600',
-    image: 'https://images.unsplash.com/photo-1757627550652-30788bfce978?w=600&q=80&fit=crop',
-    imageAlt: '나무 상자에 담긴 신선한 채소',
+    image: 'https://images.unsplash.com/photo-1561948955-570b270e7c36?w=600&q=80&fit=crop',
+    imageAlt: '상자에 담긴 신선한 토마토',
   },
 ];
 
