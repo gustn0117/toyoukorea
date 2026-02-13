@@ -29,12 +29,9 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 text-center">
           <div className="text-xs text-gray-600">
             &copy; {new Date().getFullYear()} 투유코리아. All rights reserved.
-          </div>
-          <div className="text-xs text-gray-600">
-            tooyoukorea@gmail.com
           </div>
         </div>
       </div>
