@@ -57,12 +57,10 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <div key={i} className="relative">
               <div className="flex flex-col items-center text-center">
-                {/* Number badge */}
                 <div className={`w-12 h-12 rounded-full ${step.accent} flex items-center justify-center text-white text-sm font-bold mb-6 shadow-sm`}>
                   {step.number}
                 </div>
 
-                {/* Card */}
                 <div className="group w-full rounded-2xl bg-white border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300">
                   <div className="relative h-44 w-full overflow-hidden">
                     <Image
@@ -90,7 +88,6 @@ export default function HowItWorks() {
                 </div>
               </div>
 
-              {/* Arrow between steps (mobile) */}
               {i < steps.length - 1 && (
                 <div className="md:hidden flex justify-center my-4">
                   <ArrowDown size={20} className="text-gray-300" />
@@ -100,7 +97,6 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        {/* Process summary */}
         <div className="mt-14 p-5 md:p-6 rounded-xl bg-primary-900 text-center">
           <p className="text-white/80 text-base md:text-lg">
             <span className="text-white font-semibold">새벽 경매</span>

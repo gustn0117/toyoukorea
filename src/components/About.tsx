@@ -29,7 +29,6 @@ export default function About() {
   return (
     <section id="about" className="section-padding bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <p className="text-primary-600 font-semibold text-sm tracking-wide uppercase mb-3">
             About Us
@@ -44,7 +43,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Mission statement */}
         <div className="mb-20 rounded-2xl bg-gray-50 border border-gray-100 overflow-hidden">
           <div className="grid md:grid-cols-2 gap-0">
             <div className="p-8 md:p-12 flex flex-col justify-center">
@@ -84,7 +82,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Values */}
         <div className="grid md:grid-cols-3 gap-6">
           {values.map((item, i) => (
             <div

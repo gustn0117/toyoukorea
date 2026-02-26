@@ -54,7 +54,6 @@ export default function BusinessModel() {
           </h2>
         </div>
 
-        {/* Two models */}
         <div className="grid md:grid-cols-2 gap-6 mb-14">
           {models.map((model, i) => (
             <div
@@ -88,7 +87,6 @@ export default function BusinessModel() {
           ))}
         </div>
 
-        {/* Competitive Advantages */}
         <div className="p-8 rounded-2xl bg-primary-900">
           <h3 className="text-lg font-bold text-white text-center mb-8">
             경쟁 우위

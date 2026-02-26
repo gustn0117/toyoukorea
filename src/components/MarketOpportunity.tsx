@@ -43,7 +43,6 @@ export default function MarketOpportunity() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {/* Problems */}
           <div className="p-8 rounded-2xl bg-red-50/60 border border-red-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-red-100 rounded-lg">
@@ -75,7 +74,6 @@ export default function MarketOpportunity() {
               ))}
             </div>
 
-            {/* Visual: problematic flow */}
             <div className="mt-6 p-4 rounded-lg bg-white border border-red-100">
               <div className="flex items-center justify-between text-xs text-gray-600 font-medium flex-wrap gap-y-2">
                 {['경매장', '도매상', '중간상', '소매점', '소비자'].map(
@@ -97,7 +95,6 @@ export default function MarketOpportunity() {
             </div>
           </div>
 
-          {/* Solutions */}
           <div className="p-8 rounded-2xl bg-primary-50/60 border border-primary-100">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-2 bg-primary-100 rounded-lg">
@@ -124,7 +121,6 @@ export default function MarketOpportunity() {
               ))}
             </ul>
 
-            {/* Visual: improved flow */}
             <div className="mt-6 p-4 rounded-lg bg-white border border-primary-100">
               <div className="flex items-center justify-center gap-3 text-xs font-medium">
                 <span className="px-3 py-1.5 bg-primary-50 rounded text-primary-700 border border-primary-100">

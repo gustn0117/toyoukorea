@@ -52,15 +52,12 @@ export default function Roadmap() {
           </h2>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical line (desktop) */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
 
           <div className="space-y-6 md:space-y-0">
             {phases.map((phase, i) => (
               <div key={i} className="relative md:py-8">
-                {/* Desktop timeline dot */}
                 <div
                   className={`hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full ${phase.dotColor} border-[3px] border-white shadow-sm z-10`}
                 />
